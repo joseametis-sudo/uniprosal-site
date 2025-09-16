@@ -20,19 +20,23 @@
     header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:rgba(6,15,25,.55);border-bottom:1px solid rgba(99,179,189,.15)} .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .brand{display:flex;align-items:center;gap:.8rem;font-weight:800;letter-spacing:.3px} .brand-logo{height:40px;width:auto;display:block;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.25)} .brand-text{font-size:1.05rem}
     nav ul{display:flex;gap:1.2rem;list-style:none;padding:0;margin:0} nav a{font-weight:600;color:var(--text);opacity:.9} nav a:hover{opacity:1} .menu-btn{display:none}
-    .hero{position:relative} .hero .inner{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center;padding:48px 0 22px} .headline{font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0 0 14px} .sub{font-size:clamp(1rem,1.6vw,1.1rem);color:var(--muted);margin:0 0 26px}
+    .hero{position:relative} .hero .inner{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center;padding:48px 0 22px}
+    .headline{font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0 0 14px} .sub{font-size:clamp(1rem,1.6vw,1.1rem);color:var(--muted);margin:0 0 26px}
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px} .stat{background:#0a1d23;border:1px solid #12343d;padding:16px;border-radius:14px;text-align:center} .stat strong{display:block;font-size:1.4rem}
-    .hero-illus{position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.35);border:1px solid rgba(56,189,248,.25);background:radial-gradient(100% 80% at 20% 10%,rgba(56,189,248,.25),transparent 40%),radial-gradient(80% 60% at 80% 10%,rgba(20,184,166,.28),transparent 40%),linear-gradient(180deg,#0a2330,#0b1f26)} .pulse{position:absolute;inset:0;background:radial-gradient(160px 160px at var(--x,60%) var(--y,40%),rgba(56,189,248,.25),transparent 60%)}
+    .hero-illus{position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.35);border:1px solid rgba(56,189,248,.25);background:#0b1f26;display:flex;align-items:center;justify-content:center;padding:10px}
+    .hero-illus img{width:100%;height:100%;object-fit:contain;display:block}
+    .pulse{position:absolute;inset:0;pointer-events:none;background:radial-gradient(160px 160px at var(--x,60%) var(--y,40%),rgba(56,189,248,.18),transparent 60%)}
     section{padding:54px 0} .section-title{font-size:1.6rem;margin:0 0 12px} .section-sub{color:var(--muted);margin:0 0 24px}
     .about{display:grid;grid-template-columns:1.2fr 1fr;gap:24px} .card{background:#0f2e38;border:1px solid rgba(56,189,248,.18);border-radius:18px;padding:22px;box-shadow:0 4px 18px rgba(0,0,0,.25)}
     .objectives{display:grid;grid-template-columns:repeat(3,1fr);gap:16px} .obj{display:flex;gap:12px;padding:16px;border-radius:14px;background:#0a1d23;border:1px solid #11343f} .obj svg{flex:0 0 28px}
     .chips{display:flex;flex-wrap:wrap;gap:10px} .chip{padding:8px 12px;background:#0b1f26;border:1px solid #13424d;border-radius:999px;font-weight:600;color:#d0f7ff}
-    .news{display:grid;grid-template-columns:repeat(3,1fr);gap:16px} .news .item{display:flex;flex-direction:column;border:1px solid rgba(99,179,189,.18);border-radius:16px;overflow:hidden;background:#091a20} .news .img{aspect-ratio:16/9;background:linear-gradient(135deg,rgba(20,184,166,.25),rgba(56,189,248,.25))} .news .body{padding:16px} .badge{display:inline-block;padding:3px 8px;font-size:.75rem;border-radius:999px;background:rgba(20,184,166,.15);border:1px solid rgba(20,184,166,.4)}
+    .news,.events{display:grid;grid-template-columns:repeat(3,1fr);gap:16px} .item{display:flex;flex-direction:column;border:1px solid rgba(99,179,189,.18);border-radius:16px;overflow:hidden;background:#091a20}
+    .img{aspect-ratio:16/9;background:linear-gradient(135deg,rgba(20,184,166,.25),rgba(56,189,248,.25));background-size:cover;background-position:center} .body{padding:16px} .badge{display:inline-block;padding:3px 8px;font-size:.75rem;border-radius:999px;background:rgba(20,184,166,.15);border:1px solid rgba(20,184,166,.4)}
     .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:10px} .gallery .g{aspect-ratio:1/1;border-radius:12px;background:#0b1f26;border:1px solid #174e5c} .gallery .g:hover{transform:translateY(-1px)}
     .docs{display:grid;grid-template-columns:1fr;gap:18px} .doc-list{display:grid;grid-template-columns:1fr;gap:12px} .doc{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#0b1f26;border:1px solid #123d48;border-radius:12px}
     .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px} .socials{display:flex;gap:12px} .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#0b1f26;border:1px solid #133e49}
     footer{padding:28px 0;border-top:1px solid rgba(56,189,248,.18);color:var(--muted)}
-    @media (max-width:980px){.hero .inner{grid-template-columns:1fr} .about{grid-template-columns:1fr} .news{grid-template-columns:1fr 1fr} .docs,.contact-grid{grid-template-columns:1fr} .objectives{grid-template-columns:1fr 1fr} .gallery{grid-template-columns:repeat(3,1fr)}} @media (max-width:640px){nav ul{display:none} .menu-btn{display:inline-flex;align-items:center;gap:8px;padding:.6rem .9rem;border-radius:10px;background:#0b1f26;color:var(--text);border:1px solid #133e49} .news{grid-template-columns:1fr} .objectives{grid-template-columns:1fr} .gallery{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:980px){.hero .inner{grid-template-columns:1fr} .about{grid-template-columns:1fr} .news,.events{grid-template-columns:1fr 1fr} .docs,.contact-grid{grid-template-columns:1fr} .objectives{grid-template-columns:1fr 1fr} .gallery{grid-template-columns:repeat(3,1fr)}} @media (max-width:640px){nav ul{display:none} .menu-btn{display:inline-flex;align-items:center;gap:8px;padding:.6rem .9rem;border-radius:10px;background:#0b1f26;color:var(--text);border:1px solid #133e49} .news,.events{grid-template-columns:1fr} .objectives{grid-template-columns:1fr} .gallery{grid-template-columns:repeat(2,1fr)}}
     .skip-link{position:absolute;left:-9999px} .skip-link:focus{left:12px;top:12px;background:#001014;border:2px solid var(--accent);padding:8px 12px;border-radius:10px}
   </style>
 </head>
@@ -41,7 +45,7 @@
   <header>
     <div class="container nav" role="navigation" aria-label="principal">
       <div class="brand" aria-label="UNIPROSAL">
-        <img class="brand-logo" src="https://drive.google.com/uc?export=view&id=14edhaHMPjkztu07Hgu7lNOEdDMsitaPR" alt="https://drive.google.com/file/d/14edhaHMPjkztu07Hgu7lNOEdDMsitaPR/view?usp=drive_link" />
+        <img class="brand-logo" src="https://drive.google.com/uc?export=view&id=14edhaHMPjkztu07Hgu7lNOEdDMsitaPR" alt="Logo UNIPROSAL" />
         <span class="brand-text">UNIPROSAL</span>
       </div>
       <nav>
@@ -49,10 +53,10 @@
           <li><a href="#quienes">Quiénes somos</a></li>
           <li><a href="#objetivos">Objetivos</a></li>
           <li><a href="#colegios">Colegios</a></li>
+          <li><a href="#eventos">Eventos</a></li>
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#noticias">Noticias</a></li>
           <li><a href="#documentos">Documentos</a></li>
-          <li><a href="premios.html">Premios</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -77,7 +81,11 @@
           </div>
           <p class="sub" style="margin-top:6px">*Valores orientativos. Actualiza estos datos según corresponda.</p>
         </div>
-        <div class="hero-illus" aria-hidden="true"><div class="pulse" id="pulse"></div></div>
+        <!-- Logo grande en el recuadro de la portada -->
+        <div class="hero-illus" aria-label="Logo UNIPROSAL">
+          <img src="https://drive.google.com/uc?export=view&id=14edhaHMPjkztu07Hgu7lNOEdDMsitaPR" alt="Logo UNIPROSAL a gran tamaño" />
+          <div class="pulse" id="pulse"></div>
+        </div>
       </div>
     </section>
 
@@ -132,6 +140,15 @@
       </div>
     </section>
 
+    <!-- NUEVO: Sección de Eventos (se edita con data/events.json) -->
+    <section id="eventos">
+      <div class="container">
+        <h2 class="section-title">Eventos</h2>
+        <p class="section-sub">Actividades, reuniones, premios y visitas. Edita <code>data/events.json</code> para añadir más.</p>
+        <div class="events" id="eventsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
     <section id="galeria">
       <div class="container">
         <h2 class="section-title">Galería</h2>
@@ -170,7 +187,7 @@
         <div class="card">
           <h2 class="section-title">Contacto</h2>
           <p>Para consultas, propuestas de colaboración o prensa:</p>
-          <p><strong>Correo:</strong> <a href="mailto:uniprosalsanitarios@gmail.com">uniprosalsanitarios@gmail.com</a></p>
+          <p><strong>Correo:</strong> <a href="mailto:uniprsalsanitarios@gmail.com">uniprsalsanitarios@gmail.com</a></p>
           <p><strong>Ubicación:</strong> Almería, Andalucía</p>
           <div class="socials" aria-label="redes sociales">
             <a href="#" aria-label="Twitter/X" title="Twitter/X"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4h-3l-4 5-4-5H6l6 7-6 9h3l4-6 4 6h3l-6-9 6-7Z"/></svg></a>
@@ -179,79 +196,4 @@
           </div>
         </div>
         <div class="card">
-          <h3 style="margin-top:0">Envíanos un mensaje</h3>
-          <form action="mailto:uniprosalsanitarios@gmail.com" method="post" enctype="text/plain" onsubmit="alert('Se abrirá tu cliente de correo para enviar el mensaje.');">
-            <div style="display:grid; gap:10px">
-              <label>Nombre<br><input required name="nombre" placeholder="Tu nombre" style="width:100%; padding:10px; border-radius:8px; border:1px solid #174e5c; background:#0b1f26; color:var(--text)"></label>
-              <label>Correo<br><input required type="email" name="email" placeholder="tu@correo.com" style="width:100%; padding:10px; border-radius:8px; border:1px solid #174e5c; background:#0b1f26; color:var(--text)"></label>
-              <label>Mensaje<br><textarea required name="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte" style="width:100%; padding:10px; border-radius:8px; border:1px solid #174e5c; background:#0b1f26; color:var(--text)"></textarea></label>
-              <button class="btn" type="submit">Enviar</button>
-            </div>
-            <p class="sub">Alternativa técnica: integra <em>Netlify Forms</em> o <em>Formspree</em> para recibir mensajes sin email local.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container" style="display:flex; gap:12px; justify-content:space-between; align-items:center; flex-wrap:wrap">
-      <div>© <span id="year"></span> UNIPROSAL · Unión de Profesionales Sanitarios de Almería</div>
-      <div style="display:flex; gap:14px">
-        <a href="#">Aviso legal</a>
-        <a href="#">Privacidad</a>
-        <a href="#">Accesibilidad</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const pulse=document.getElementById('pulse'); if(pulse){document.addEventListener('pointermove',e=>{const x=(e.clientX/innerWidth)*100; const y=(e.clientY/innerHeight)*100; pulse.style.setProperty('--x',x+'%'); pulse.style.setProperty('--y',y+'%');});}
-    const menuBtn=document.getElementById('menuBtn'); const menu=document.getElementById('menu'); menuBtn?.addEventListener('click',()=>{const visible=getComputedStyle(menu).display!=='none'; menu.style.display=visible?'none':'flex'; menuBtn.setAttribute('aria-expanded', String(!visible));});
-
-    const DATA={noticias:[
-      {titulo:'Reunión con Vithas Almería',fecha:'2025-07-04',categoria:'Reunión',resumen:'Encuentro con Manuel Sánchez, gerente de Vithas Almería, para explorar nuevas líneas de colaboración.',embed:'https://www.facebook.com/100094461420639/posts/596682020157174/'},
-      {titulo:'Visita al Espacio Alma Almería',fecha:'2025-05-22',categoria:'Visita institucional',resumen:'Visita conjunta para conocer el proyecto inclusivo Espacio Alma y abrir vías de colaboración.',embed:'https://www.facebook.com/codinan/posts/1348303620066340/'},
-      {titulo:'I Premios UNIPROSAL: gala y premiados',fecha:'2025-04-08',categoria:'Evento',resumen:'Primera edición de los Premios UNIPROSAL en el Teatro Apolo. Reconocimientos al Compromiso, Innovación y Desarrollo, Labor Asistencial, Diversidad y Trayectoria.',url:'https://almeriaciudad.es/actualidad/la-sanidad-almeriense-brilla-en-la-i-gala-de-los-premios-uniprosal-celebrada-en-el-apolo',img:'https://almeriaciudad.es/uploads/styles/news/public/media/image/premios-uniprosal--5-.JPG'},
-      {titulo:'Anuncio oficial: I Gala Premios UNIPROSAL (7 de abril)',fecha:'2025-03-26',categoria:'Anuncio',resumen:'Convocatoria pública de la primera edición de los Premios UNIPROSAL en el Teatro Apolo.',embed:'https://www.facebook.com/photo.php?fbid=1217632687038029&id=100063739264264&set=a.500374585430513'},
-      {titulo:'Premio a la Labor Asistencial: AECC Almería',fecha:'2025-04-08',categoria:'Premios',resumen:'La AECC recibe el galardón a la Labor Asistencial en la I Gala UNIPROSAL.',embed:'https://www.facebook.com/contraelcancer.almeria/posts/973940611594604/'},
-      {titulo:'Premio a la Diversidad: Fundación Poco Frecuente',fecha:'2025-04-08',categoria:'Premios',resumen:'Reconocimiento a la labor por la diversidad y las enfermedades poco frecuentes.',embed:'https://www.facebook.com/fundacionpocofrecuente/posts/1005385368404942/'}
-    ],documentos:[
-      {titulo:'Galería: I Premios UNIPROSAL (Ayuntamiento de Almería)',fecha:'2025-04-08',url:'https://almeriaciudad.es/actualidad/la-sanidad-almeriense-brilla-en-la-i-gala-de-los-premios-uniprosal-celebrada-en-el-apolo'},
-      {titulo:'Anuncio de la I Gala (Dentistas Almería, Facebook)',fecha:'2025-03-26',url:'https://www.facebook.com/photo.php?fbid=1217632687038029&id=100063739264264&set=a.500374585430513'},
-      {titulo:'Premio a la Diversidad: Fundación Poco Frecuente (Facebook)',fecha:'2025-04-08',url:'https://www.facebook.com/fundacionpocofrecuente/posts/1005385368404942/'},
-      {titulo:'Reunión con Vithas Almería (Facebook)',fecha:'2025-07-04',url:'https://www.facebook.com/100094461420639/posts/596682020157174/'},
-      {titulo:'Visita a Espacio Alma Almería (Facebook)',fecha:'2025-05-22',url:'https://www.facebook.com/codinan/posts/1348303620066340/'}
-    ]};
-
-    // Noticias
-    const newsGrid=document.getElementById('newsGrid'); const fmt=(s)=>new Date(s).toLocaleDateString('es-ES',{year:'numeric',month:'long',day:'2-digit'});
-    if(newsGrid){newsGrid.innerHTML=DATA.noticias.map(n=>{if(n.embed){const enc=encodeURIComponent(n.embed);return `<article class="item"><div class="body"><span class="badge">${n.categoria}</span><h3 style="margin:.4rem 0 .2rem; font-size:1.05rem">${n.titulo}</h3><p class="sub" style="margin:.1rem 0 .6rem">${fmt(n.fecha)}</p><div class="fb-embed"><iframe src="https://www.facebook.com/plugins/post.php?href=${enc}&show_text=true&width=500" width="100%" height="520" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div><p style="margin:.6rem 0 1rem; color:#c8e9f2">${n.resumen}</p><a class="btn btn-secondary" href="${n.embed}" target="_blank" rel="noopener">Abrir en Facebook</a></div></article>`;}return `<article class="item">${n.img?`<a class="img" href="${n.url||'#'}" target="_blank" rel="noopener" style="background-image:url('${n.img}'); background-size:cover; background-position:center"></a>`:`<div class="img" role="img" aria-label="Imagen"></div>`}<div class="body"><span class="badge">${n.categoria}</span><h3 style="margin:.4rem 0 .2rem; font-size:1.05rem">${n.titulo}</h3><p class="sub" style="margin:.1rem 0 .6rem">${fmt(n.fecha)}</p><p style="margin:.2rem 0 1rem; color:#c8e9f2">${n.resumen}</p>${n.url?`<a class="btn btn-secondary" href="${n.url}" target="_blank" rel="noopener">Leer más</a>`:''}</div></article>`;}).join('');}
-
-    // Documentos
-    const docList=document.getElementById('docList'); if(docList){const isPDF=(u)=>/\.pdf(\?.*)?$/i.test(u||''); docList.innerHTML=DATA.documentos.map(d=>{const pdf=isPDF(d.url); const attrs=pdf?'download':'target="_blank" rel="noopener"'; const label=pdf?'Descargar':'Abrir'; return `<div class="doc"><div><strong>${d.titulo}</strong><div class="sub">${fmt(d.fecha)}</div></div><a class="btn btn-secondary" href="${d.url}" ${attrs}>${label}</a></div>`;}).join('');}
-
-    // Galería: primero intentamos manifest local; si no, Drive
-    (async () => {
-      const grid = document.getElementById('galleryDriveGrid');
-      if(!grid) return;
-      try {
-        const res = await fetch('assets/gallery/manifest.json', { cache: 'no-store' });
-        if (res.ok) {
-          const files = await res.json();
-          if (Array.isArray(files) && files.length) {
-            grid.innerHTML = files.map(src => `<a class="g" href="${src}" target="_blank" rel="noopener" style="background-image:url('${src}'); background-size:cover; background-position:center" title="Abrir imagen"></a>`).join('');
-            return;
-          }
-        }
-      } catch (e) { /* fallback */ }
-
-      const DRIVE_GALLERY = ["1TcfAgls0kjyPX6RU7W_ozvAoboOXMnqb"];
-      const driveView = (id) => `https://drive.google.com/uc?export=view&id=${id}`;
-      grid.innerHTML = DRIVE_GALLERY.map(id => { const u = driveView(id); return `<a class="g" href="${u}" target="_blank" rel="noopener" style="background-image:url('${u}'); background-size:cover; background-position:center" title="Abrir imagen"></a>`; }).join('');
-    })();
-
-    document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
-</body>
-</html>
+          <h3 st
